@@ -1,0 +1,55 @@
+
+<%-include('include/navbar')%>
+
+
+      <!-- Page Header-->
+      <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                   
+                
+                  <form action="/login" method="post">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+          
+                      <h3 class="mb-5">Sign in</h3>
+          
+                      <div class="form-outline mb-4">
+                        <input required value="" type="email" id="email" name="email" class="form-control form-control-lg" placeholder="Email"/>
+                      </div>
+          
+                      <div class="form-outline mb-4">
+                        <input required type="text" id="password" name="password" class="form-control form-control-lg" placeholder="Password"/>
+                      </div>
+          
+                     
+          
+                      <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                    
+        
+                      
+                        <a href="/singup" class="btn btn-primary btn-lg btn-block">Singup</a>
+                       
+        
+        
+          
+                    </div>
+                    
+                  </div>
+                </form>
+
+                
+                </div> 
+            </div>
+        </div>
+    </header>
+     <!-- Page Header-->
+
+
+
+
+    
+  <%-include('include/_footer')%>
+
+

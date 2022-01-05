@@ -1,0 +1,74 @@
+<%-include('include/navbar')%>
+
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+  <div class="container position-relative px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="post-heading">
+                  <h1><%= article.title %></h1>
+                  <span class="meta">
+                      Posted by
+                      <a href="#!">....</a>
+                      on <%= article.createdAt.toLocaleDateString() %>
+                  </span>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</header>
+
+<article class="mb-4">
+  <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+          <!-- <div class="col-md-10 col-lg-8 col-xl-7"> -->
+            <%= article.description %>
+          <!-- </div> -->
+      </div>
+  
+
+<div class="col-mb-10 col-lg-8 col-xl-7">
+  <a href="edit/<%= article.id %>" 
+    class="btn btn-info" >Edit</a>
+  
+    <form action="/articles/<%=article.id%>?_method=DELETE" method="post" class="d-inline">
+      <BUtton type="submit" class="btn btn-danger">DELETE</BUtton>
+  </form>
+</div>
+</div>
+</article>
+
+
+     
+  
+<!-- 
+<div class="mb-4">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+    <h1 class="post-heading"><%= article.title %></h1>
+    <div class="text-muted mb-2">
+      <%= article.createdAt.toLocaleDateString() %>
+      </div>
+      <div class="col-md-10 col-lg-8 col-xl-7"><%= article.description %></div>
+
+      <a href="/" class="btn btn-secondary">All Articles</a>
+
+    <a href="edit/<%= article.id %>" 
+      class="btn btn-info" >Edit</a>
+    
+      <form action="/articles/<%=article.id%>?_method=DELETE" method="post" class="d-inline">
+        <BUtton type="submit" class="btn btn-danger">DELETE</BUtton>
+    </form>
+   </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+<%-include('include/_footer')%>
